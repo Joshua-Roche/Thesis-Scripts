@@ -1,13 +1,4 @@
 """Saving segmentations to disk and cleaning up model output.
-
-Two formats are written side by side for every segmentation:
-
-* ``segmentation_<series>-<name>.npy`` — the raw boolean volume, which the
-  viewer reloads verbatim.
-* an RTSTRUCT DICOM — contours, for anything else that reads DICOM.
-
-The ``.npy`` is the source of truth; the RTSTRUCT is a lossy export because
-contouring discards single-voxel detail.
 """
 
 import logging

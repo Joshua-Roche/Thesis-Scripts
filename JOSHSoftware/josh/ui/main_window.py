@@ -1,11 +1,4 @@
 """The main window: browse scans, and queue folders for batch segmentation.
-
-Two tabs:
-
-* **View Scans** — point at a directory, list every DICOM series found beneath
-  it, and open one in an :class:`~josh.ui.image_window.ImageWindow`.
-* **Segmentation** — queue up whole folders and run the model over them
-  unattended, writing a mask beside each scan.
 """
 
 import logging

@@ -1,9 +1,4 @@
 """Background threads for the two jobs that would otherwise freeze the UI.
-
-Both are ``QThread`` subclasses that do their work in :meth:`run` and hand the
-result back over a signal. Results are emitted as ``Signal(object)`` so numpy
-arrays travel through untouched — ``Signal(list)`` would silently convert every
-volume into a Python list of row arrays.
 """
 
 import logging

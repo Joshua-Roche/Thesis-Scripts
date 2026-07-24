@@ -1,16 +1,4 @@
 """Vectorised brush stamping.
-
-The interactive brush paints a filled sphere of voxels centred on the cursor.
-The obvious implementation — three nested Python loops testing
-``dx*dx + dy*dy + dz*dz <= r*r`` for every candidate voxel and assigning one at
-a time — runs on *every* mouse-move event and, at a radius of 50, visits a
-quarter of a million voxels per event in pure Python. That is the app's worst
-interactive bottleneck.
-
-:func:`stamp_brush` produces the identical result with numpy: for each affected
-slice it builds a boolean disk over the bounded sub-window the brush touches and
-assigns it in one vectorised operation. numpy runs that as compiled C, so the
-per-stroke cost drops by orders of magnitude with no change in behaviour.
 """
 
 from numpy import arange

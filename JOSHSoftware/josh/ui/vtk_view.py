@@ -1,7 +1,4 @@
 """Turning boolean segmentation volumes into 3D surfaces for the VTK viewer.
-
-Marching cubes gives a triangle mesh of the mask boundary; the rest is the
-boilerplate needed to hand that mesh to VTK.
 """
 
 import logging
